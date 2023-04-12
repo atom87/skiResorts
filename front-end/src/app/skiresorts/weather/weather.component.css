@@ -1,0 +1,11 @@
+
+img{
+    width: 50%;
+}
+
+.one{
+    display: inline-block;
+    width: 80%;
+    overflow: hidden;
+    margin-left: 80px;  
+}

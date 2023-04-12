@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-8">
+        <table class="table table-light">
+            <thead class="thead-light">
+                <tr>
+                    <th>Name</th>
+                    <th>Length</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="{{track.color}}" *ngFor="let track of tracks"> <!--boja stavljena u klasu i onda se u css-u podesi-->
+                    <td>{{track.name}}</td>
+                    <td>{{track.length_km}} km</td>
+                    <td>{{track.rating}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-4">
+        <form>
+            <div class="form-group">
+                <label>Sort by:</label>
+                <select name="sort" class="form-control" [(ngModel)]="sortCriteria" (change)="updateCriteria()">
+                    <option value="length_km">Length</option>
+                    <option value="rating">Rating</option>
+                </select>
+            </div>
+        </form>
+    </div>
+</div>

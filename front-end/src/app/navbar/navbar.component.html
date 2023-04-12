@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand navbar-dark bg-primary">
+    <a class="navbar-brand">Skijanija.rs</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" [routerLink]="['home']" routerLinkActive="active">HOME</a>
+          </li>
+          <li class="nav-item active" *ngFor = "let resort of skiResortNames?.resorts"> <!--resorts je iz modela za listu risortova-->
+            <a class="nav-link"  [routerLink]="['ski-resorts', resort._id]">{{resort.name}}</a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="navbar-nav ml-auto">  
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['about']" routerLinkActive="active">ABOUT</a>
+        </li>
+      </ul>
+
+
+
+  </nav>
